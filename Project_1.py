@@ -38,7 +38,7 @@ text_array = text.split('')
 words_count = len(text_array)
 
 # Oznameni analyzy
-print('Začínám analyzovat slova.')
+print("I'm analyzing the text")
 results = [words_count,0,0,0,0]
 current_word = 0
 while (current_word < words_count):
@@ -52,4 +52,8 @@ while (current_word < words_count):
     if (analyze_word.isdigit()):
         results[4] += 1
     current_word += 1
-print('')
+print('There are ' + word_count +  ' words in the selected text.')
+print('There are ' + results[1] + ' titlecase words')
+print('There are ' + results[2] + ' uppercase words')
+print('There are ' + results[3] + ' lowercase words')
+print('There are ' + results[4] + ' numeric strings')
