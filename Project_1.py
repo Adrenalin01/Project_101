@@ -61,8 +61,6 @@ print('There are ' + results[4] + ' numeric strings')
 bar_index = 0
 while (bar_index < len(results)):
     graph_results = results[bar_index]
-    graph_text = str(bar_index + 1) + ''/
-    + str('*' * graph_results)/
-    + '' + str(graph_results)
+    graph_text = str(bar_index + 1) + '' + str('*' * graph_results) + '' + str(graph_results)
     print(graph_text)
     bar_index += 1
