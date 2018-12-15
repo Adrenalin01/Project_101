@@ -34,7 +34,7 @@
 
 # definice textu
 text = "Situated about 10 miles west of Kemmerer, Fossil Butte is a ruggedly impressive topographic feature that rises sharply some 1000 feet above Twin Creek Valley to an elevation of more than 7500 feet above sea level. The butte is located just north of US 30N and the Union Pacific Railroad, which traverse the valley."
-text_array = text.split('')
+text_array = text.split(' ')
 words_count = len(text_array)
 
 # Oznameni analyzy
@@ -46,18 +46,19 @@ while (current_word < words_count):
     if (analyze_word[0].isupper()):
         results[1] += 1
     if (analyze_word.isupper()):
-        resuts[2] += 1
+        results[2] += 1
     if (analyze_word.islower()):
-        resuts[3] += 1
+        results[3] += 1
     if (analyze_word.isdigit()):
         results[4] += 1
     current_word += 1
-print('There are ' + word_count +  ' words in the selected text.')
-print('There are ' + results[1] + ' titlecase words')
-print('There are ' + results[2] + ' uppercase words')
-print('There are ' + results[3] + ' lowercase words')
-print('There are ' + results[4] + ' numeric strings')
-
+print('*' * 50)
+print('There are ' + str(words_count) +  ' words in the selected text.')
+print('There are ' + str(results[1]) + ' titlecase words')
+print('There are ' + str(results[2]) + ' uppercase words')
+print('There are ' + str(results[3]) + ' lowercase words')
+print('There are ' + str(results[4]) + ' numeric strings')
+print('*' * 50)
 bar_index = 0
 while (bar_index < len(results)):
     graph_results = results[bar_index]
