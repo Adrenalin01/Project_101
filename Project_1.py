@@ -33,7 +33,7 @@
 
 
 # definice textu
-text = ''
+text = "Situated about 10 miles west of Kemmerer, Fossil Butte is a ruggedly impressive topographic feature that rises sharply some 1000 feet above Twin Creek Valley to an elevation of more than 7500 feet above sea level. The butte is located just north of US 30N and the Union Pacific Railroad, which traverse the valley."
 text_array = text.split('')
 words_count = len(text_array)
 
@@ -57,3 +57,12 @@ print('There are ' + results[1] + ' titlecase words')
 print('There are ' + results[2] + ' uppercase words')
 print('There are ' + results[3] + ' lowercase words')
 print('There are ' + results[4] + ' numeric strings')
+
+bar_index = 0
+while (bar_index < len(results)):
+    graph_results = results[bar_index]
+    graph_text = str(bar_index + 1) + ''/
+    + str('*' * graph_results)/
+    + '' + str(graph_results)
+    print(graph_text)
+    bar_index += 1
