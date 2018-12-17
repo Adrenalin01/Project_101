@@ -36,7 +36,7 @@ while(switch):
 #author = 
 #'''
 
-# definice textu test
+# definice textu
 
 texts = ['''
 situated about 10 miles west of kemmerer, 
