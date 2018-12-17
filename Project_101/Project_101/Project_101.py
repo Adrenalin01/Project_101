@@ -1,3 +1,6 @@
+#welcome
+print('Hello user.')
+print('-' * 50)
 #| USER |   PASSWORD  |
 #-----------------------
 #| bob  |     123     |
@@ -14,16 +17,19 @@ data = {
             }
 
 # we want to ask user for username and password
-Username    = str(input('Please enter the username: '))
-Password    = str(input('Please enter the password: '))
+switch = True
+while(switch):
+    Username    = str(input('Please enter the username: '))
+    Password    = str(input('Please enter the password: '))
 
 # two conditions for evaluating the inputs
-if data.get(Username) != Password:
-    print('Password or username is wrong')
 
-elif data.get(Username) == Password:
-    print('Permission granted')
+    if data.get(Username) != Password:
+        print('Password or username is wrong')
 
+    if data.get(Username) == Password:
+        print('Permission granted')
+        switch = False
 
 
 #'''
@@ -63,13 +69,15 @@ text_choose = int(input('Choose the text you want to analyze [1,2 or 3]: '))
 
 text = texts[text_choose - 1]
 
-#final_text = text.replace(',',' ')
+text = text.replace(',','').replace('.','').replace('\n','').replace('-','')
 text_array = text.split(' ')
 words_count = len(text_array)
 print(text_array)
+
 # Oznameni analyzy
 print("I'm analyzing the text")
 results = [words_count,0,0,0,0]
+number_sum = 0
 current_word = 0
 while (current_word < words_count):
     analyze_word = text_array[current_word]
@@ -81,6 +89,7 @@ while (current_word < words_count):
         results[3] += 1
     if (analyze_word.isdigit()):
         results[4] += 1
+        number_sum += int(analyze_word)
     current_word += 1
 print('-' * 50)
 print('There are ' + str(words_count) +  ' words in the selected text.')
@@ -95,3 +104,5 @@ while (bar_index < len(results)):
     graph_text = str(bar_index + 1) + ' ' + str('*' * graph_results) + ' ' + str(graph_results)
     print(graph_text)
     bar_index += 1
+print('-' * 50)
+print('If we summed all the numbers in this text we would get: ' + str(number_sum))
