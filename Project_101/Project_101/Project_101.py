@@ -1,5 +1,5 @@
 #welcome
-print('Hello user.')
+print('Hello user. Welcome to the app. Please log in:')
 print('-' * 50)
 #| USER |   PASSWORD  |
 #-----------------------
